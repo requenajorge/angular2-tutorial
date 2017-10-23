@@ -1,3 +1,4 @@
+import { ClientesModule } from './../clientes/clientes.module';
 import { SharedModule } from './../shared/shared.module';
 import { MovimientosComponent } from './movimientos.component';
 import { NgModule } from '@angular/core';
@@ -6,7 +7,7 @@ import { NuevoComponent } from './nuevo/nuevo.component';
 import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, ClientesModule],
   declarations: [MovimientosComponent, NuevoComponent, ListaComponent],
   exports: [MovimientosComponent]
 
