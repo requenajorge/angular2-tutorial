@@ -1,5 +1,12 @@
 <h1>1 Componente Principal</h1>
 <p>Radio:
-    <input type="number">
+    <input 
+        type="number" 
+        [ngModel]="radio"
+        (ngModelChange)="calcularCircunferencia($event)"
+    >
 </p>
+<input type="button" (click)="mostrar=true" value="Click me">
+<p *ngIf="mostrar">Hola Mundo</p>
+<p>La circunferencia de un circulo de radio {{radio}} es {{circunferencia}}</p>
 <app-movimientos>cargando movimmientos</app-movimientos>
